@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ManagementController {
 
   @GetMapping("/price/{productId}")
-  public ResponseEntity<PriceDto> getPrice(@PathVariable Integer productId, @RequestParam Integer brandId,
+  ResponseEntity<PriceDto> getPrice(@PathVariable Long productId, @RequestParam Long brandId,
       @RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss") LocalDateTime date);
 }

@@ -23,7 +23,7 @@ public class BrandEntity implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "BRAND_ID", nullable = false)
-  private Integer id;
+  private Long id;
 
   @Column(name = "NAME", nullable = false)
   private String name;

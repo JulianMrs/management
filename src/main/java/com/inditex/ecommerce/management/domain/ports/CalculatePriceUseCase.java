@@ -5,5 +5,7 @@ import java.time.LocalDateTime;
 
 public interface CalculatePriceUseCase {
 
-  PriceModel calculateProductPrice(Integer productId, Integer brandId, LocalDateTime date);
+  PriceModel calculateProductPrice(Long productId, Long brandId, LocalDateTime date);
+
+  boolean existsProducIdAndBrandId(Long productId, Long brandId);
 }

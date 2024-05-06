@@ -25,7 +25,7 @@ public class PriceEntity implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "PRICE_ID", nullable = false)
-  private Integer id;
+  private Long id;
 
   @Column(name = "START_DATE", nullable = false)
   @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")

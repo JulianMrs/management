@@ -23,14 +23,15 @@ public class ManagementControllerImpl implements ManagementController {
   }
 
   @Override
-  public ResponseEntity<PriceDto> getPrice(Integer productId, Integer brandId, LocalDateTime date) {
-    var finalPrice = PriceDtoMapper.INSTANCE.priceModelToDto(calculatePriceUseCase.calculateProductPrice(productId, brandId, date));
+  public ResponseEntity<PriceDto> getPrice(Long productId, Long brandId, LocalDateTime date) {
 
-    if (finalPrice == null) {
-      throw new ResponseStatusException(HttpStatus.NOT_FOUND, "El producto con ID '" + productId + "' no existe.");
+    if (!calculatePriceUseCase.existsProducIdAndBrandId(productId, brandId)) {
+      throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+          "El producto con id '" + productId + "' perteneciente al grupo: '" + brandId + "' no existe.");
     }
 
-    return ResponseEntity.ok(finalPrice);
+    return ResponseEntity.ok(
+        PriceDtoMapper.INSTANCE.priceModelToDto(calculatePriceUseCase.calculateProductPrice(productId, brandId, date)));
   }
 
   @ExceptionHandler(ResponseStatusException.class)

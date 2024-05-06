@@ -13,6 +13,6 @@ public interface PricesRepository extends JpaRepository<PriceEntity, Long> {
 
   @Query(
       "SELECT p FROM PriceEntity p WHERE p.product.id = :productId AND p.brand.id = :brandId")
-  Optional<ArrayList<PriceEntity>> findByProductAndDateAndBrand(@Param("productId") Integer productId,
-      @Param("brandId") Integer brandId);
+  Optional<ArrayList<PriceEntity>> findByProductIdAndBrandId(@Param("productId") Long productId,
+      @Param("brandId") Long brandId);
 }
