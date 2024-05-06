@@ -1,10 +1,11 @@
 # MANAGEMENT-micro
 
-Este microservicio proporciona un servicio para obtener el precio de un producto en una fecha específica para un grupo de cadenas.
+Este microservicio proporciona un servicio para obtener el precio de un producto en una fecha específica para una cadena de grupo
+determinada.
 
 ## API
 
-El microservicio expone una API RESTful con los siguientes endpoints:
+El microservicio expone una API RESTful con el siguient endpoint:
 
 ### Obtener Precio de Producto
 
