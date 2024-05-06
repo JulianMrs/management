@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "080009be-a23f-4b12-a04d-496a1984d460",
+		"name": "Management Inditex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6128380"
+	},
+	"item": [
+		{
+			"name": "getPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/price/35455",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"price",
+						"35455"
+					],
+					"query": [
+						{
+							"key": "brandId",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "date",
+							"value": "2020-06-14T10:00:00",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Test1_Peticion_2020-06-14-10:00:00",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/price/35455?brandId=1&date=2020-06-14T10:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"price",
+								"35455"
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "date",
+									"value": "2020-06-14T10:00:00"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Test2_Peticion_2020-06-14-16:00:00",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/price/35455?brandId=1&date=2020-06-14T16:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"price",
+								"35455"
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "date",
+									"value": "2020-06-14T16:00:00"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Test3_Peticion_2020-06-14-21:00:00",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/price/35456?brandId=1&date=2020-06-14T21:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"price",
+								"35456"
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "date",
+									"value": "2020-06-14T21:00:00"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Test4_Peticion_2020-06-15-10:00:00",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/price/35455?brandId=1&date=2020-06-15T10:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"price",
+								"35455"
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "date",
+									"value": "2020-06-15T10:00:00"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Test5_Peticion_2020-06-16-21:00:00",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/price/35455?brandId=1&date=2020-06-16T21:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"price",
+								"35455"
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "date",
+									"value": "2020-06-16T21:00:00"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Test6_PeticionProductIdIncorrecto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/price/35456?brandId=1&date=2020-06-14T10:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"price",
+								"35456"
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "date",
+									"value": "2020-06-14T10:00:00"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
