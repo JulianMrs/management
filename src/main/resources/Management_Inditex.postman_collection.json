@@ -109,7 +109,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/price/35456?brandId=1&date=2020-06-14T21:00:00",
+							"raw": "http://localhost:8080/price/35455?brandId=1&date=2020-06-14T21:00:00",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -117,7 +117,7 @@
 							"port": "8080",
 							"path": [
 								"price",
-								"35456"
+								"35455"
 							],
 							"query": [
 								{
