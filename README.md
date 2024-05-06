@@ -91,4 +91,14 @@ El microservicio estará disponible en `http://localhost:8080`.
 
 ## Tests
 
-Dentro de la carpeta 're'
+Dentro de la carpeta [resources](src/main/resources) podemos encontrar un
+archivo JSON que consiste en una colección de POSTMAN con los siguientes TEST a modo de ejemplos:
+
+- Test 1: petición a las 10:00 del día 14 del producto 35455 para la brand 1 (ZARA)
+- Test 2: petición a las 16:00 del día 14 del producto 35455 para la brand 1 (ZARA)
+- Test 3: petición a las 21:00 del día 14 del producto 35455 para la brand 1 (ZARA)
+- Test 4: petición a las 10:00 del día 15 del producto 35455 para la brand 1 (ZARA)
+- Test 5: petición a las 21:00 del día 16 del producto 35455 para la brand 1 (ZARA)
+- Test 6: petición a las 10:00 del día 14 del producto 35456 para la brand 1
+
+[Colección de Postman](src/main/resources/Management Inditex.postman_collection.json)
