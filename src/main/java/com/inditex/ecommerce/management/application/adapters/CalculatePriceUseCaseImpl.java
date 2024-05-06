@@ -8,10 +8,11 @@ import com.inditex.ecommerce.management.domain.ports.PricesRepository;
 import com.inditex.ecommerce.management.domain.ports.ProductRepository;
 import java.time.LocalDateTime;
 import java.util.Comparator;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class CalculatePriceUseCaseImpl implements CalculatePriceUseCase {
 
   private final PricesRepository pricesRepository;
@@ -19,15 +20,6 @@ public class CalculatePriceUseCaseImpl implements CalculatePriceUseCase {
   private final ProductRepository productRepository;
 
   private final BrandRepository brandRepository;
-
-  @Autowired
-  public CalculatePriceUseCaseImpl(PricesRepository pricesRepository, ProductRepository productRepository,
-      BrandRepository brandRepository) {
-    this.pricesRepository = pricesRepository;
-
-    this.productRepository = productRepository;
-    this.brandRepository = brandRepository;
-  }
 
   @Override
   public PriceModel calculateProductPrice(Long productId, Long brandId, LocalDateTime date) {

@@ -5,7 +5,7 @@ import com.inditex.ecommerce.management.domain.ports.CalculatePriceUseCase;
 import com.inditex.ecommerce.management.infraestructure.dtos.PriceDto;
 import com.inditex.ecommerce.management.infraestructure.ports.ManagementController;
 import java.time.LocalDateTime;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -13,14 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
+@RequiredArgsConstructor
 public class ManagementControllerImpl implements ManagementController {
 
   private final CalculatePriceUseCase calculatePriceUseCase;
-
-  @Autowired
-  public ManagementControllerImpl(CalculatePriceUseCase calculatePriceUseCase) {
-    this.calculatePriceUseCase = calculatePriceUseCase;
-  }
 
   @Override
   public ResponseEntity<PriceDto> getPrice(Long productId, Long brandId, LocalDateTime date) {
