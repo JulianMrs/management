@@ -101,4 +101,4 @@ archivo JSON que consiste en una colección de POSTMAN con los siguientes TEST a
 - Test 5: petición a las 21:00 del día 16 del producto 35455 para la brand 1 (ZARA)
 - Test 6: petición a las 10:00 del día 14 del producto 35456 para la brand 1 (ZARA)
 
-[Colección de Postman](src/main/resources/Management Inditex.postman_collection.json)
+[Colección de Postman](src/main/resources/Management_Inditex.postman_collection.json)
