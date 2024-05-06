@@ -22,12 +22,12 @@ public class CalculatePriceUseCaseImpl implements CalculatePriceUseCase {
   private final BrandRepository brandRepository;
 
   @Override
-  public PriceModel calculateProductPrice(Long productId, Long brandId, LocalDateTime date) {
+  public PriceModel calculateProductPrice(Long productId, Long brandId, LocalDateTime applicationDate) {
     var prices = PriceDomainMapper.INSTANCE.pricesEntitiesToModels(
         pricesRepository.findByProductIdAndBrandId(productId, brandId).orElse(null));
 
     var finalPrice = prices.stream()
-        .filter(price -> date.isAfter(price.getStartDate()) && date.isBefore(price.getEndDate()))
+        .filter(price -> applicationDate.isAfter(price.getStartDate()) && applicationDate.isBefore(price.getEndDate()))
         .max(Comparator.comparingInt(PriceModel::getPriority));
     return finalPrice.orElse(null);
   }

@@ -19,7 +19,7 @@ public class ManagementControllerImpl implements ManagementController {
   private final CalculatePriceUseCase calculatePriceUseCase;
 
   @Override
-  public ResponseEntity<PriceDto> getPrice(Long productId, Long brandId, LocalDateTime date) {
+  public ResponseEntity<PriceDto> getPrice(Long productId, Long brandId, LocalDateTime applicationDate) {
 
     if (!calculatePriceUseCase.existsProducIdAndBrandId(productId, brandId)) {
       throw new ResponseStatusException(HttpStatus.NOT_FOUND,
@@ -27,7 +27,7 @@ public class ManagementControllerImpl implements ManagementController {
     }
 
     return ResponseEntity.ok(
-        PriceDtoMapper.INSTANCE.priceModelToDto(calculatePriceUseCase.calculateProductPrice(productId, brandId, date)));
+        PriceDtoMapper.INSTANCE.priceModelToDto(calculatePriceUseCase.calculateProductPrice(productId, brandId, applicationDate)));
   }
 
   @ExceptionHandler(ResponseStatusException.class)
