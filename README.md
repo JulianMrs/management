@@ -85,7 +85,7 @@ Para ejecutar el microservicio en un entorno local, sigue estos pasos:
 4. Ejecuta el microservicio:
 
    ```
-   java -jar target/microservicio-precios.jar
+   java -jar target/management.jar
    ```
 
 El microservicio se encuentra disponible en `http://localhost:8080`.
